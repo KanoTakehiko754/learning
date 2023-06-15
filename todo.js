@@ -161,12 +161,12 @@ addButton.onclick = function(event) {
     localStorage.setItem("nextTaskNumber",Number(nextTaskNumber) + 1);
 };
 
-//全て削除するボタンが押されたら全ての項目を削除する
+//全て削除するボタンが押されたら全ての項目に対して削除ボタンの効果を発動する
 clearButton.onclick = function (event){
-    const tasksCopy = tasks.concat(); 
     const clickEvent = new Event("click");
-    /*{
+    for (let i = tasks.children.length - 1; i >= 0; i--){
+        const taskUnion = tasks.children[i];
         const deleteButton = taskUnion.querySelector(".delete-button");
-        deleteButton.dispatchEvent(clickEvent); 
-    };*/
+        deleteButton.dispatchEvent(clickEvent);
+    };
 };
