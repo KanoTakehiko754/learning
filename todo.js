@@ -127,6 +127,9 @@ function createTaskUnion(taskName, taskNumber, completed) {
         const taskNumber = localStorage.getItem("nextTaskNumber");
         const taskCompleted = taskUnion.classList.contains("completed-todo-item");
         createTaskUnion(taskName, taskNumber, taskCompleted);
+        //ローカルストレージに保存
+        localStorage.setItem("task" + String(nextTaskNumber),Number(taskCompleted)+taskName);
+        localStorage.setItem("nextTaskNumber",Number(nextTaskNumber) + 1);
     };
     taskUnion.append(copyButton);
     countTasks();
