@@ -4,11 +4,16 @@
     <head>
         <meta charset="utf-8">
         <title>ToDoリスト</title>
+        <link href="todo.css" rel="stylesheet">
     </head>
     <body>
         <h1>ToDoリスト</h1>
-        <p>未完了のタスク数:0</p>
-        <input>
-        <button>追加</button>
+        <p>完了したタスク数:<span id="done-number">0</span></p>
+        <p>未完了のタスク数:<span id="undone-number">0</span></p>
+        <input id="new-task">
+        <button id="add">追加</button>
+        <div id="tasks"></div>
+        <button id="clear">全て削除する</button>
     </body>
+    <script src="todo.js"></script>
 </html>
